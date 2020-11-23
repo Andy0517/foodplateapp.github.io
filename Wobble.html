@@ -15,7 +15,7 @@
       // FirebaseUI config.
       var uiConfig = {
         // Url to redirect to after a successful sign-in.
-        'signInSuccessUrl': '/Wobble1.html',
+        'signInSuccessUrl': '/Wobble.html',
         'callbacks': {
           'signInSuccess': function(user, credential, redirectUrl) {
             if (window.opener) {
@@ -104,7 +104,15 @@
            <!--桌巾清單-->
            <div class="source_box row">
             <div class="soruce col-4" v-for="(value,index) in person_inf.have_soruce.doily" v-show="index<=end_pg && index>=star_pg && Chosed_doily">
-              <div class="soruce_item" v-bind:id="value.name" v-bind:style="{backgroundImage: 'url(\'' + value.url + '\')' }" v-on:click="crear_item(this.event.target,value.url)"></div>
+              <div class="soruce_item" v-bind:id="value.name" v-bind:style="{backgroundImage: 'url(\'' + value.url + '\')' .Clipping {
+  width: 300px; //your width
+  height: 200px; //your height
+  overflow: hidden;
+}
+.ImageItem {
+  width: auto; //or 100%. Auto is to keep aspect ratio
+  height: 100%;
+}" v-on:click="crear_item(this.event.target,value.url)"></div>
             </div>
           </div>
            <!--餐具清單-->
